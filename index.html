@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+   <h1>Anthony's game:</h1>
+    <input type="text" id="inputField">
+   <button onclick="calculate()">Calculate!</button>
+
+   <h2 id="print"></h2><h2 style="display:inline">Value:</h2><h2 id="printAmount"></h2>
+
+
+    <script>
+        var string;
+        var names;
+        document.getElementById('inputField').value = "your name";
+
+        string = document.getElementById('inputField').value;
+
+        function calculate() {
+            var amount = 0;
+            string = document.getElementById('inputField').value;
+            document.getElementById('print').innerHTML = string;
+
+            highString = string.toUpperCase();
+
+            for (i = 0; i<string.length; i++) {
+                if (highString.charCodeAt(i) >= 65){amount += (highString.charCodeAt(i)-64);}
+            }
+            document.getElementById('printAmount').innerHTML = amount;
+
+            names.push(string);
+        }
+
+
+
+    </script>
+
+</body>
+</html>
