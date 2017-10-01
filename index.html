@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
+</body>
+
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Anthony's game</title>
 </head>
-<body>
+<body style="
+background-image: url(beirut.jpg); /*You will specify your image path here.*/
+
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+color: white;
+font-family: Calibri;
+
+">
    <h1>Anthony's game:</h1>
     <input type="text" id="inputField">
-   <button onclick="calculate()">Calculate!</button>
+   <button onclick="calculate()">Calculate value!</button>
 
    <h2 id="print"></h2><h2 style="display:inline">Value:</h2><h2 id="printAmount"></h2>
 
@@ -29,6 +44,7 @@
             for (i = 0; i<string.length; i++) {
                 if (highString.charCodeAt(i) >= 65){amount += (highString.charCodeAt(i)-64);}
             }
+
             document.getElementById('printAmount').innerHTML = amount;
 
             names.push(string);
